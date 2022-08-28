@@ -21,6 +21,12 @@
     --logo-dicor-color: #000;
 }
 
+/* Reset indentation settings in a tag group */
+h1, h2, h3, h4, h5, h6, ul, p {
+padding: 0; /* ??? */
+margin: 0; /* ??? */
+}
+
 /* Utility class for resetting settings lists*/
 .list {
     list-style: none;
@@ -127,27 +133,36 @@ body {
 /* Шапка - "Hero" */
 .hero {
     background-color: var(--complementary-background-color); /* + */
+    text-align: center; /* Для центрирования заголовка и кнопки??? */
+    
+    padding-top: 200px; /* ??? */
+    padding-bottom: 200px; /* ??? */
 }
     .hero-title {
         font-weight: 900; /* + */
         font-size: 44px; /* + */
         line-height: 1.4; /* + */
         letter-spacing: 0.06em; /* + */
-        text-align: center; /* + */
         text-transform: uppercase; /* + */
         color: var(--complementary-text-color); /* + */
-    }
+
+        margin-bottom: 30px; /* Отступ от заголовка до кнопки??? */
+}
 
     .herro-button {
         /* Button interactivity settings */
         cursor: pointer; /* + */
         /* Button geometry */
+        display: inline-block; /* ??? */
+        border: 1px solid transparent; /* ??? */
         background: var(--accent-text-color); /* + */        
-        border-radius: 4px; /* ? */
+        border-radius: 4px; /* + */
         border: none; /* + */
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); /* ? */
-        width: 216px; /* ? */
-        height: 50px; /* ? */
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); /* + */
+        padding: 10px 32px; /* ??? */
+        min-width: 216px; /* ??? */ 
+        min-height: 50px; /* ??? */
+        
         /* Button text */
         font-family: inherit; /* + */
         font-weight: 700; /* + */
@@ -160,8 +175,8 @@ body {
         /* Interactivity of changing the appearance of herro-button */
         .herro-button:hover,
         .herro-button:focus {
-        background-color: #188CE8; /* ? */
-        border: none; /* ? */
+        background-color: #188CE8; /* + */
+        border: none; /* + */
         }
 
 /* General settings for "sections" of all pages of the site */
@@ -176,6 +191,8 @@ body {
     font-size: 36px; /* + */
     line-height: 1.2; /* + */
     color: var(--secondary-text-color); /* + */
+
+    margin-bottom: 50px; /* ??? */
 }
 
 /* Особливості - "Peculiarities", section on page index.html */
@@ -185,6 +202,8 @@ body {
     line-height: 1.14; /* + */
     text-transform: uppercase; /* + */
     color: var(--secondary-text-color); /* + */
+
+    margin-bottom: 10px; /* ??? */
 }
 
 .peculiarities-list-text {
@@ -199,11 +218,18 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 border-radius: 0px 0px 4px 4px;
 }
 
+.team-img {
+    display: inline-block; /* ??? */
+    margin-bottom: 30px; /* ??? */
+}
+
 .team-name {
     font-weight: 500; /* + */
     font-size: 16px; /* + */
     line-height: 1.2; /* + */
     color: var(--secondary-text-color); /* + */
+
+    margin-bottom: 10px; /* ??? */
 }
 
 .team-position {
@@ -217,10 +243,13 @@ border-radius: 0px 0px 4px 4px;
     /* Button interactivity settings */
     cursor: pointer; /* + */
     /* Button geometry */
+    display: inline-block; /* ??? */
+    border: 1px solid transparent; /* ??? */
     background: var(--secondary-background-color); /* + */
     border: none; /* + */
-    border-radius: 4px; /* ? */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* ? */
+    border-radius: 4px; /* + */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* + */
+    padding: 6px 22px; /* ??? */
     /* Button text */
     color: var(--secondary-text-color); /* + */
     font-family: inherit; /* + */
@@ -229,15 +258,23 @@ border-radius: 0px 0px 4px 4px;
     line-height: 1.6; /* + */
     text-align: center; /* + */
 }
+.first-portfolio-button {
+    padding: 6px 25px; /* ??? */
+}
 
     /* Interactivity of changing the appearance of portfolio-buttons */
         .portfolio-button:hover,
         .portfolio-button:focus {
         background-color: var(--accent-text-color); /* + */
         color: var(--complementary-text-color);
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); /* ? */
-        border-radius: 4px; /* ? */
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); /* + */
+        border-radius: 4px; /* + */
         }
+
+.portfolio-img {
+    display: inline-block; /* ??? */
+    margin-bottom: 20px; /* ??? */
+}
 
 .portfolio-title {
     font-weight: 700; /* + */
@@ -245,10 +282,25 @@ border-radius: 0px 0px 4px 4px;
     line-height: 2; /* + */
     letter-spacing: 0.06em; /* + */
     color: var(--secondary-text-color); /* + */
+
+    margin-bottom: 4px; /* ??? */
 }
 
 .portfolio-project {
     font-size: 16px; /* + */
     line-height: 1.9; /* + */
     color: var(--maine-text-color); /* + */
+}
+
+/* Geometri settings */
+/* Settings of the ".container" auxiliary class,
+intended for centering and limiting the content of site elements in width. */
+.container {
+    width: 1200px; /* ??? */
+    padding-left: 15px; /* ??? */
+    padding-right: 15px; /* ??? */
+    margin-left: auto; /* ??? */
+    margin-right: auto; /* ??? */
+
+    outline: 2px dashed red;
 }

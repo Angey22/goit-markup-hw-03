@@ -11,27 +11,29 @@
 </head>
 
 <body>
-    
+    <!-- <div class="container"> -->
     <!-- Верхня лінія - "Сайтбар" -->
     <header>
-        <nav>
-            <a class="logo" href="./index.html">Web<span class="logo-second-half-head">Studio</span></a>
+        <div class="container">
+            <nav>
+                <a class="logo" href="./index.html">Web<span class="logo-second-half-head">Studio</span></a>
+
+                <ul class="list">
+                    <li><a class="site-nav-link current-position" href="./index.html">Студія</a></li>
+                    <li><a class="site-nav-link" href="./portfolio.html">Портфоліо</a></li>
+                    <li><a class="site-nav-link" href="./index.html">Контакти</a></li>
+                </ul>
+            </nav>
 
             <ul class="list">
-                <li><a class="site-nav-link current-position" href="./index.html">Студія</a></li>
-                <li><a class="site-nav-link" href="./portfolio.html">Портфоліо</a></li>
-                <li><a class="site-nav-link" href="./index.html">Контакти</a></li>
+                <li>
+                    <a class="contacts-head" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li>
+                    <a class="contacts-head" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
             </ul>
-        </nav>
-
-        <ul class="list">
-            <li>
-                <a class="contacts-head" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-            <li>
-                <a class="contacts-head" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-        </ul>
+        </div>
     </header>
     
     <!-- Основна частина головної сторінки сайту -->
@@ -39,12 +41,15 @@
         
         <!-- Шапка - "Hero" -->
         <section class="hero">
-            <h1 class="hero-title">Ефективні рішення для<br>вашого бізнесу</h1>
-            <button class="herro-button" type="button">Замовити послугу</button>
+            <div class="container">
+                <h1 class="hero-title">Ефективні рішення для<br>вашого бізнесу</h1>
+                <button class="herro-button" type="button">Замовити послугу</button>
+            </div>
         </section>
         
         <!-- Особливості - "Peculiarities" -->
         <section>
+            <div class="container">
             <h2 class="section-title visually-hidden">Особливості нашої робори</h2>
             <!-- Этот заголовок "спрятан", т.к. его нет в макете -->
             <ul class="list">
@@ -74,10 +79,12 @@
                     </p>
                 </li>
             </ul>
+            </div>
         </section>
        
         <!-- Чим ми займаємося -->
         <section>
+            <div class="container">
             <h2 class="section-title">Чим ми займаємося</h2>
             <ul class="list">
                 <li>
@@ -91,38 +98,42 @@
                         width="370" />
                 </li>
             </ul>
+            </div>
         </section>
         
         <!-- Наша команда -->
         <section class="section-highlighted">
+            <div class="container">
             <h2 class="section-title">Наша команда</h2>
             <ul class="list">
                 <li class="team-item">
-                    <img src="./images/photo_ihor_demyanenko_o.jpg" alt="Світлина Ігоря Демя'ненко" width="270" />
+                    <img class="team-img" src="./images/photo_ihor_demyanenko_o.jpg" alt="Світлина Ігоря Демя'ненко" width="270" />
                     <h3 class="team-name">Ігор Дем'яненко</h3>
                     <p class="team-position" lang="en">Product Designer</p>
                 </li>
                 <li class="team-item">
-                    <img src="./images/photo_olga_repina_o.jpg" alt="Світлина Ольги Рєпіної" width="270" />
+                    <img class="team-img" src="./images/photo_olga_repina_o.jpg" alt="Світлина Ольги Рєпіної" width="270" />
                     <h3 class="team-name">Ольга Рєпіна</h3>
                     <p class="team-position" lang="en">Frontend Developer</p>
                 </li>
                 <li class="team-item">
-                    <img src="./images/photo_mykola_tarasov_o.jpg" alt="Світлина Миколи Тарасова" width="270" />
+                    <img class="team-img" src="./images/photo_mykola_tarasov_o.jpg" alt="Світлина Миколи Тарасова" width="270" />
                     <h3 class="team-name">Микола Тарасов</h3>
                     <p class="team-position" lang="en">Marketing</p>
                 </li>
                 <li class="team-item">
-                    <img src="./images/photo_mykhailo_yermakov_o.jpg" alt="Світлина Михайла Єрмакова" width="270" />
+                    <img class="team-img" src="./images/photo_mykhailo_yermakov_o.jpg" alt="Світлина Михайла Єрмакова" width="270" />
                     <h3 class="team-name">Михайло Єрмаков</h3>
                     <p class="team-position" lang="en">UI Designer</p>
                 </li>
             </ul>
+            </div>
         </section>
     </main>
     
     <!-- Підвал -->
     <footer class="footer">
+        <div class="container">
         <a class="logo" href="./index.html">Web<span class="logo-second-half-foot">Studio</span></a>
         <address>
             <ul class="list">
@@ -138,7 +149,8 @@
                 </li>
             </ul>
         </address>
+        </div>
     </footer>
-
+    <!-- </div> -->
 </body>
 </html>
