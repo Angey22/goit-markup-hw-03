@@ -23,8 +23,8 @@
 
 /* Reset indentation settings in a tag group */
 h1, h2, h3, h4, h5, h6, ul, p {
-padding: 0; /* ??? */
-margin: 0; /* ??? */
+padding: 0; /* + */
+margin: 0; /* + */
 }
 
 /* Utility class for resetting settings lists*/
@@ -61,6 +61,10 @@ body {
 
 /* Website logo */
 .logo {
+    /* Geometri */
+    display: inline-block; /* ??? */
+
+    /* Text */
     text-decoration: none; /* + */
     font-family: 'Raleway', sans-serif; /* + */
     font-size: 26px; /* + */
@@ -68,14 +72,57 @@ body {
     color: var(--accent-text-color);  /* + */
 }
     .logo-second-half-head {
+        /* Text */
         color: var(--logo-dicor-color); /* + */
+        /* Geometri */
+        display: inline-block; /* ??? */
+        margin-right: 93px;
     }
     .logo-second-half-foot {
+        /* Text */
         color: var(--complementary-text-color); /* + */
+        /* Geometri */
+        display: inline-block; /* ??? */
+        margin-bottom: 20px; /* ??? */
     }
 
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+/* General header options */
+.header-container {
+    /* Geometry */
+    display: flex; /* ??? */
+    align-items: center; /* ??? */
+    justify-content: space-between; /* ??? */
+}
+
 /* Site navigation */
+.page-nav {
+    /* Geometry */
+    display: flex;
+    align-items: center;
+}
+/* Site navigation & Hed contacts*/
+.nav-list,
+.contacts-head-list {
+    /* Geometry */
+    display: flex; /* + */
+}
+
+.nav-list-itm:not(:last-child),
+.contacts-head-itm:not(:last-child) {
+    /* Geometry */
+    margin-right: 50px; /* + */
+}
+
 .site-nav-link {
+    /* Geometry */
+    display: block; /* ??? */
+    padding: 32px 0; /* ??? */
+
+    /* Text */
     text-decoration: none; /* + */
     font-weight: 500; /* + */
     font-size: 14px; /* + */
@@ -83,9 +130,16 @@ body {
     letter-spacing: 0.02em; /* + */
     color: var(--secondary-text-color); /* + */
 }
+    /* Interactive effect */
     .site-nav-link:hover,
     .site-nav-link:focus {
+        /* Text */
         color: var(--accent-text-color); /* + */
+
+        /* Geometry */
+        border-bottom: 4px solid var(--accent-text-color);
+        border-radius: 2px;
+        padding: 32px 0 28px 0;
     }
 
 /* Utility class for simulating the display of the current position on site in the site menu */
@@ -95,6 +149,7 @@ body {
 
 /* Contact information */
 .contacts-head {
+    /* Text */
     text-decoration: none; /* + */
     font-weight: 500; /* + */
     font-size: 14px; /* + */
@@ -104,6 +159,7 @@ body {
 }
 
 .contacts-foot, .contacts-map {
+    /* Text */
     font-style: normal; /* + */
     text-decoration: none; /* + */
     font-size: 14px; /* + */
@@ -112,6 +168,7 @@ body {
 }
 
 .contacts-map {
+    /* Text */
     color: var(--complementary-text-color); /* + */
 }
 
@@ -122,44 +179,66 @@ body {
 .contacts-foot:focus,
 .contacts-map:hover,
 .contacts-map:focus{
+    /* Text */
     color: var(--accent-text-color); /* + */
 }
 
 /* Підвал */
 .footer {
+    /* Geometry */
+    padding-top: 60px; /* ??? */
+    padding-bottom: 60px; /* ??? */
+
+    /* Decor */
     background-color: var(--complementary-background-color); /* + */
+}
+
+.footer-list {
+    /* Geometry */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list-item:not(:last-child) {
+    /* Geometry */
+    margin-bottom: 9px; /* + */
 }
 
 /* Шапка - "Hero" */
 .hero {
-    background-color: var(--complementary-background-color); /* + */
-    text-align: center; /* Для центрирования заголовка и кнопки??? */
+    /* Geomeetry */
+    padding-top: 200px; /* + */
+    padding-bottom: 200px; /* + */
+    text-align: center; /* + */
     
-    padding-top: 200px; /* ??? */
-    padding-bottom: 200px; /* ??? */
+    /* Decor */
+    background-color: var(--complementary-background-color); /* + */
 }
     .hero-title {
+        /* Geometry */
+        margin-bottom: 30px; /* + */
+
+        /* Text */
         font-weight: 900; /* + */
         font-size: 44px; /* + */
         line-height: 1.4; /* + */
         letter-spacing: 0.06em; /* + */
         text-transform: uppercase; /* + */
-        color: var(--complementary-text-color); /* + */
-
-        margin-bottom: 30px; /* Отступ от заголовка до кнопки??? */
+        color: var(--complementary-text-color); /* + */        
 }
 
     .herro-button {
         /* Button interactivity settings */
         cursor: pointer; /* + */
+        
         /* Button geometry */
-        display: inline-block; /* ??? */
+        display: inline-block; /* + */
         border: 1px solid transparent; /* ??? */
         background: var(--accent-text-color); /* + */        
         border-radius: 4px; /* + */
         border: none; /* + */
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); /* + */
-        padding: 10px 32px; /* ??? */
+        padding: 10px 32px; /* + */
         min-width: 216px; /* ??? */ 
         min-height: 50px; /* ??? */
         
@@ -180,59 +259,138 @@ body {
         }
 
 /* General settings for "sections" of all pages of the site */
-
 .section-highlighted {
+    /* Decor */
     background-color: var(--secondary-background-color);
 }
 
 .section-title {
+    /* Geometry */
+    margin-bottom: 50px; /* Bottom padding for h2 section headers */
+
+    /* Text */
     text-align: center; /* + */
     font-weight: 700; /* + */
     font-size: 36px; /* + */
     line-height: 1.2; /* + */
-    color: var(--secondary-text-color); /* + */
+    color: var(--secondary-text-color); /* + */    
+}
 
-    margin-bottom: 50px; /* ??? */
+/* Geometri settings of the ".container" auxiliary class,
+intended for centering and limiting the content of site elements in width. */
+.container {
+    /* Geometry */
+    width: 1200px; /* + */
+    padding-left: 15px; /* + */
+    padding-right: 15px; /* + */
+    padding-top: 94px; /* + */
+    padding-bottom: 94px; /* + */
+    margin-left: auto; /* + */
+    margin-right: auto; /* + */
+
+    outline: 2px dashed tomato; /* Убрать */
+}
+
+.container-vert-padding-none {
+    /* Geometry */
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Особливості - "Peculiarities", section on page index.html */
+.peculiarities-list {
+    /* Geometry */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.peculiarities-list-itm {
+    /* Geometry */
+    max-width: 270px;
+}
+
+.peculiarities-list-itm:not(:last-child) {
+    /* Geometry */
+    margin-right: 30px;
+}
+
 .peculiarities-list-title {
+    /* Geometry */
+    margin-bottom: 10px; /* ??? */
+
+    /* Text */
     font-weight: 700; /* + */
     font-size: 14px; /* + */
     line-height: 1.14; /* + */
     text-transform: uppercase; /* + */
-    color: var(--secondary-text-color); /* + */
-
-    margin-bottom: 10px; /* ??? */
+    color: var(--secondary-text-color); /* + */    
 }
 
 .peculiarities-list-text {
+    /* Text */
     font-size: 14px;
     line-height: 1.7;
 }
 
-/* Наша команда, section on page index.html */
-.team-item {
-background: var(--complementary-text-color);
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
+/* Чим ми займаємося, section on page index.html */
+.work-list {
+    /* Geometry */
+    display: flex;
+    justify-content: center; /* ??? */
 }
 
-.team-img {
-    display: inline-block; /* ??? */
-    margin-bottom: 30px; /* ??? */
+.work-list-itm:not(:last-child) {
+    /* Geometry */
+    margin-right: 30px;
+}
+
+
+.work-list-img {
+    /* Geometry */
+    display: inline-block; /* + */
+}
+
+/* Наша команда, section on page index.html */
+.team-list {
+    display: flex;
+    justify-content: center;
+}
+.team-list-item {
+    /* Geometry */
+    text-align: center;
+    /* Decor */
+    background: var(--complementary-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-list-item:not(:last-child) {
+    /* Geometry */
+    margin-right: 30px;
+}
+
+.team-list-img {
+    /* Geometry */
+    display: inline-block; /* + */
+    margin-bottom: 30px; /* + */
 }
 
 .team-name {
+    /* Geometry */
+    margin-bottom: 10px; /* ??? */
+
+    /* Text */
     font-weight: 500; /* + */
     font-size: 16px; /* + */
     line-height: 1.2; /* + */
-    color: var(--secondary-text-color); /* + */
-
-    margin-bottom: 10px; /* ??? */
+    color: var(--secondary-text-color); /* + */    
 }
 
 .team-position {
+    /* Geometry */
+    margin-bottom: 30px;
+    /* Text */
     font-size: 16px; /* + */
     line-height: 1.2; /* + */
 }
@@ -242,14 +400,16 @@ border-radius: 0px 0px 4px 4px;
 .portfolio-button {
     /* Button interactivity settings */
     cursor: pointer; /* + */
+    
     /* Button geometry */
-    display: inline-block; /* ??? */
+    display: inline-block; /* + */
     border: 1px solid transparent; /* ??? */
     background: var(--secondary-background-color); /* + */
     border: none; /* + */
     border-radius: 4px; /* + */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* + */
-    padding: 6px 22px; /* ??? */
+    padding: 6px 22px; /* + */
+    
     /* Button text */
     color: var(--secondary-text-color); /* + */
     font-family: inherit; /* + */
@@ -258,9 +418,11 @@ border-radius: 0px 0px 4px 4px;
     line-height: 1.6; /* + */
     text-align: center; /* + */
 }
-.first-portfolio-button {
-    padding: 6px 25px; /* ??? */
-}
+
+    .first-portfolio-button {
+        /* Button geometry */
+        padding: 6px 25px; /* + */
+    }
 
     /* Interactivity of changing the appearance of portfolio-buttons */
         .portfolio-button:hover,
@@ -272,35 +434,27 @@ border-radius: 0px 0px 4px 4px;
         }
 
 .portfolio-img {
-    display: inline-block; /* ??? */
-    margin-bottom: 20px; /* ??? */
+    /* Geometry */
+    display: inline-block; /* + */
+    margin-bottom: 20px; /* + */
 }
 
 .portfolio-title {
+    /* Geometry */
+    margin-bottom: 4px; /* + */
+    
+    /* Text */
     font-weight: 700; /* + */
     font-size: 18px; /* + */
     line-height: 2; /* + */
     letter-spacing: 0.06em; /* + */
     color: var(--secondary-text-color); /* + */
-
-    margin-bottom: 4px; /* ??? */
 }
 
 .portfolio-project {
+    /* Text */
     font-size: 16px; /* + */
     line-height: 1.9; /* + */
     color: var(--maine-text-color); /* + */
 }
 
-/* Geometri settings */
-/* Settings of the ".container" auxiliary class,
-intended for centering and limiting the content of site elements in width. */
-.container {
-    width: 1200px; /* ??? */
-    padding-left: 15px; /* ??? */
-    padding-right: 15px; /* ??? */
-    margin-left: auto; /* ??? */
-    margin-right: auto; /* ??? */
-
-    outline: 2px dashed red;
-}
