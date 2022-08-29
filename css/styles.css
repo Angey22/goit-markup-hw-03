@@ -19,12 +19,20 @@
     --accent-text-color: #2196F3;
     --individual-text-color: rgba(255, 255, 255, 0.6);
     --logo-dicor-color: #000;
+    --portfolio-card-set-gap: 30px;
 }
 
 /* Reset indentation settings in a tag group */
 h1, h2, h3, h4, h5, h6, ul, p {
 padding: 0; /* + */
 margin: 0; /* + */
+}
+
+/* Service setting of geometry rules for all images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Utility class for resetting settings lists*/
@@ -288,7 +296,7 @@ intended for centering and limiting the content of site elements in width. */
     margin-left: auto; /* + */
     margin-right: auto; /* + */
 
-    outline: 2px dashed tomato; /* Убрать */
+    /* outline: 2px dashed tomato;  - служебный стиль для выделения границ секции */
 }
 
 .container-vert-padding-none {
@@ -345,12 +353,6 @@ intended for centering and limiting the content of site elements in width. */
     margin-right: 30px;
 }
 
-
-.work-list-img {
-    /* Geometry */
-    display: block; /* + */
-}
-
 /* Наша команда, section on page index.html */
 .team-list {
     display: flex;
@@ -372,7 +374,6 @@ intended for centering and limiting the content of site elements in width. */
 
 .team-list-img {
     /* Geometry */
-    display: block; /* + */
     margin-bottom: 30px; /* + */
 }
 
@@ -390,6 +391,7 @@ intended for centering and limiting the content of site elements in width. */
 .team-position {
     /* Geometry */
     margin-bottom: 30px;
+
     /* Text */
     font-size: 16px; /* + */
     line-height: 1.2; /* + */
@@ -440,28 +442,39 @@ intended for centering and limiting the content of site elements in width. */
         .portfolio-filter-button:hover,
         .portfolio-filter-button:focus {
         background-color: var(--accent-text-color); /* + */
-        color: var(--complementary-text-color);
+        color: var(--complementary-text-color); /* + */
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); /* + */
         border-radius: 4px; /* + */
         }
 
+/* General geometry parameters of the section with cards - portfolio */
 .portfolio {
     /* Geometry */
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* + */
+    flex-wrap: wrap; /* !!! */
+    margin-top: calc(-1 * var(--portfolio-card-set-gap)); /* !!! */
+    margin-left: calc(-1 * var(--portfolio-card-set-gap)); /* !!! */
 }
+
 .portfolio-itm {
     /* Geometry */
-    border: 1px solid #EEEEEE;
+    flex-basis: calc(100%/3 - 30px); /* !!! */
+    margin-top: var(--portfolio-card-set-gap); /* !!! */
+    margin-left: var(--portfolio-card-set-gap); /* !!! */
 }
 
-.portfolio-img {
+.portfolio-card {
+    /* Decor */
+    border: 1px solid #EEEEEE; /* ??? */
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); /* ??? */
+}
+
+.portfolio-card-content {
     /* Geometry */
-    display: block; /* + */
-    margin-bottom: 20px; /* + */
+    padding: 20px 24px; /* ??? */
 }
 
-.portfolio-title {
+.portfolio-card-title {
     /* Geometry */
     margin-bottom: 4px; /* + */
     
@@ -473,12 +486,9 @@ intended for centering and limiting the content of site elements in width. */
     color: var(--secondary-text-color); /* + */
 }
 
-.portfolio-project {
-    /* Geometry */
-    margin-bottom: 20px;
+.portfolio-card-text {
     /* Text */
     font-size: 16px; /* + */
     line-height: 1.9; /* + */
     color: var(--maine-text-color); /* + */
 }
-
